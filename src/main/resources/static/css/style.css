@@ -18,6 +18,15 @@ body {
   background-size: cover;
 }
 
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0
+;
+
+}
+
 section {
     position: relative;
     max-width: 500px; /* Adjust the max-width as needed */
