@@ -18,14 +18,7 @@ body {
   background-size: cover;
 }
 
-header
-{
-  position: absolute;
-  top: 0;
-  left: 0
-;
 
-}
 
 section {
     position: relative;
@@ -130,4 +123,5 @@ button:hover {
   text-decoration: underline;
   color: #a8a8a8;
 }
+
 
