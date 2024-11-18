@@ -54,10 +54,13 @@ public class SecurityConfig {
                 })
 
 
+
                 .authorizeHttpRequests(registry ->{
-                    registry.requestMatchers("/req/signup","/css/**","/js/**").permitAll();
+                    registry.requestMatchers("/req/signup","/css/**","/js/**","/favicon.ico").permitAll();
                     registry.anyRequest().authenticated();
                 })
                 .build();
+
+
     }
 }
