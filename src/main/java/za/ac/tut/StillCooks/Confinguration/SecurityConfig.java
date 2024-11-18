@@ -52,6 +52,12 @@ public class SecurityConfig {
                     httpForm.defaultSuccessUrl("/index");
 
                 })
+                .logout(logout -> {
+                    logout.logoutUrl("/signout") // URL to trigger logout
+                            .logoutSuccessUrl("/req/login") // Redirect to login page after logout
+                            .invalidateHttpSession(true) // Invalidate the session
+                            .clearAuthentication(true); // Clear authentication
+                })
 
 
 
@@ -62,5 +68,8 @@ public class SecurityConfig {
                 .build();
 
 
+
     }
+
+
 }

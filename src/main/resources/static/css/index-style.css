@@ -49,8 +49,9 @@ ul {
     list-style: none;
 }
 
-.row {
-    display: flex;
+.myrow {
+    display: flex !important;
+
 }
 
 .column {
@@ -146,7 +147,7 @@ nav a:hover,
 }
 
 .hero .container {
-    background: url(./imgs/hero-img.jpg), var(--cl-4--);
+    background: url(./images/imgs/hero-img.jpg), var(--cl-4--);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
@@ -204,12 +205,12 @@ p {
     padding: 2em 0;
 }
 
-.time .row {
+.time .myrow {
     align-items: center;
     gap: 1em;
 }
 
-.hero .time .row {
+.hero .time .myrow {
     background: var(--cl-7--);
     padding: 0.5em 1em;
     border-radius: 30px;
@@ -535,7 +536,7 @@ h2 {
 
 /* Subscribe */
 .subscribe {
-    background: url(./imgs/sub-bg.png), var(--cl-4--);
+    background: url(./images/imgs/sub-bg.png), var(--cl-4--);
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
@@ -557,7 +558,7 @@ h2 {
     margin-top: 2em;
 }
 
-.subscribe-input .row {
+.subscribe-input .myrow {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -571,7 +572,7 @@ h2 {
     -o-border-radius: 15px;
 }
 
-.subscribe-input .row>* {
+.subscribe-input .myrow>* {
     flex: 1 1 10em;
 }
 
@@ -625,7 +626,7 @@ footer hr {
     .toggleMenu {
         position: absolute;
         right: 5%;
-        background-image: url(./imgs/open.svg);
+        background-image: url(./images/imgs/open.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 30px;
@@ -641,7 +642,7 @@ footer hr {
 
     .toggleMenu.active {
         position: fixed;
-        background-image: url(./imgs/close.svg);
+        background-image: url(./images/imgs/close.svg);
         background-size: 25px;
     }
 
@@ -721,11 +722,11 @@ footer hr {
     }
 
     .toggleMenu {
-        background-image: url(./imgs/nav.svg);
+        background-image: url(./images/imgs/nav.svg);
     }
 
     .toggleMenu.active {
-        background-image: url(./imgs/nav-close.svg);
+        background-image: url(./images/imgs/nav-close.svg);
     }
 
     .hero-content {
@@ -733,7 +734,7 @@ footer hr {
         width: 100%;
     }
 
-    .hero .time .row {
+    .hero .time .myrow {
         background: var(--cl-4--);
     }
 }
