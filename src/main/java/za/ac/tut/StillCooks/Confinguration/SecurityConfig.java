@@ -26,12 +26,12 @@ public class SecurityConfig {
 
 
     @Bean
-    public UserDetailsService userDetailsService(){
+    public UserDetailsService userDetailsService() {
         return stillCooksUserService;
     }
 
     @Bean
-    public AuthenticationProvider authenticationProvider(){
+    public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
         provider.setUserDetailsService(stillCooksUserService);
         provider.setPasswordEncoder(passwordEncoder());
@@ -39,20 +39,17 @@ public class SecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-        return httpSecurity
-                .csrf(AbstractHttpConfigurer::disable)
-                .formLogin(httpForm ->{
+    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
+        return httpSecurity.csrf(AbstractHttpConfigurer::disable).formLogin(httpForm -> {
                     httpForm.loginPage("/req/login").permitAll();
                     httpForm.defaultSuccessUrl("/index");
 
-                })
-                .logout(logout -> {
+                }).logout(logout -> {
                     logout.logoutUrl("/signout") // URL to trigger logout
                             .logoutSuccessUrl("/req/login") // Redirect to login page after logout
                             .invalidateHttpSession(true) // Invalidate the session
@@ -60,13 +57,10 @@ public class SecurityConfig {
                 })
 
 
-
-                .authorizeHttpRequests(registry ->{
-                    registry.requestMatchers("/req/signup","/css/**","/js/**","/favicon.ico").permitAll();
+                .authorizeHttpRequests(registry -> {
+                    registry.requestMatchers("/req/signup", "/css/**", "/js/**", "/favicon.ico").permitAll();
                     registry.anyRequest().authenticated();
-                })
-                .build();
-
+                }).build();
 
 
     }
