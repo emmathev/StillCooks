@@ -7,10 +7,10 @@ StillCooks is a South African recipe generator that helps users discover delicio
 - ✅ **South African Cuisine Focus** – Highlighting traditional and modern recipes from South Africa.  
 - ✅ **Advanced Filtering & Sorting** – Find recipes based on dietary preferences, allergens, or meal type.  
 - ✅ **Nutritional Information** – Get insights into the health benefits of each recipe.  
-- ✅ **Shopping List & Meal Planning** – Save ingredients and plan meals for the week.  
+- ✅ **Shopping List & Meal Planning(TBD)** – Save ingredients and plan meals for the week.  
 - ✅ **User Ratings & Reviews** – Share feedback and discover top-rated recipes.  
-- ✅ **Multilingual Support** – Access recipes in multiple languages.  
-- ✅ **Offline Mode** – Use the app even without an internet connection.  
+- ✅ **Multilingual Support (TBD)** – Access recipes in multiple languages.  
+- ✅ **Offline Mode (TBD)** – Use the app even without an internet connection.  
 
 ## 🛠️ Tech Stack  
 - **Backend:** Java Spring Boot (for RESTful services)  
